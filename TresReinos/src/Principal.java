@@ -20,10 +20,20 @@ public class Principal {
 		System.out.println("Madeira: " + s.getQtdTotal("madeira", governantes));
 		System.out.println("Agua: " + s.getQtdTotal("agua", governantes));
 
-		System.out.println("Prata: " + s.getQtdTotal("prata", governantes));
-
+		System.out.println("\n-------------------------");
+		System.out.println(s.getQtdFicafarVivo("Montante", governantes));
+		System.out.println("\n-------------------------");
+		System.out.println(s.getQtdFicafarVivo("Lenha", governantes));
 		System.out.println("\n-------------------------");
 		System.out.println(s.getQtdFicafarVivo("Clareza", governantes));
+
+		System.out.println("\n-------------------------");
+		System.out.println("Viagens para o governante Montante: " + s.calcularQtdViagens("Montante", governantes));
+		System.out.println("\n-------------------------");
+		System.out.println("Viagens para o governante Lenha: " + s.calcularQtdViagens("Lenha", governantes));
+		System.out.println("\n-------------------------");
+		System.out.println("Viagens para o governante Clareza: " + s.calcularQtdViagens("Clareza", governantes));
+
 	}
 
 }

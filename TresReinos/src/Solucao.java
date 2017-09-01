@@ -33,6 +33,7 @@ public class Solucao {
 	// Metodo para resposta da questão B
 	public String getQtdFicafarVivo(String nomeGovernante, ArrayList<Governante> governantes) {
 		String resultado = "";
+
 		// Buscar o governante na lista com vase no nome
 		for (int i = 0; i < governantes.size(); i++) {
 			if (governantes.get(i).getNome().equals(nomeGovernante)) {
@@ -41,6 +42,19 @@ public class Solucao {
 						+ governantes.get(i).getPedidoMadeira() + "\n" + "Agua: " + governantes.get(i).getPedidoAgua();
 			}
 
+		}
+		return resultado;
+	}
+
+	public int calcularQtdViagens(String nomeGovernante, ArrayList<Governante> governantes) {
+		int resultado = 0;
+
+		// buscar governante na lista com base no nome
+		for (int i = 0; i < governantes.size(); i++) {
+			if (governantes.get(i).getNome().equals(nomeGovernante)) {
+				resultado = (governantes.get(i).getPedidoMadeira() / 50) + (governantes.get(i).getPedidoOuro() / 100)
+						+ (governantes.get(i).getPedidoAgua() / 10000);
+			}
 		}
 		return resultado;
 	}
